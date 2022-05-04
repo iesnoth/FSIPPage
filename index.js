@@ -10,6 +10,8 @@ content.append(header)
 //Create dog-content div
 let dogContent = document.createElement('div');
 dogContent.setAttribute('class','dog-content')
+dogContent.style.padding = '10px';
+dogContent.style.display = 'flex'
 
 //Append Rizzo's picture
 let dogImage = document.createElement('img')
@@ -17,8 +19,6 @@ let dogImage = document.createElement('img')
 dogImage.setAttribute('class','dog-name')
 dogImage.setAttribute('src','./assets/rizzo.jpg')
 dogImage.style.width = '200px';
-dogImage.style.height = '350px';
-
 
 
 //Dog details div creation
