@@ -9,7 +9,6 @@ header.setAttribute('class','dog-name')
 content.append(header)
 //Create dog-content div
 let dogContent = document.createElement('div');
-
 dogContent.setAttribute('class','dog-content')
 
 //Append Rizzo's picture
@@ -20,23 +19,40 @@ dogImage.setAttribute('src','./assets/rizzo.jpg')
 dogImage.style.width = '200px';
 dogImage.style.height = '350px';
 
-dogContent.append(dogImage)
+
 
 //Dog details div creation
 let dogDetails = document.createElement('div');
-
+dogDetails.setAttribute('class','dog-details')
 
 //Dog Description header
 let description = document.createElement('h3');
+description.textContent = 'Description:';
+dogDetails.append(description);
 
-description.textContent = 'Description:'
+//paragraph
+let paragraph = document.createElement('p')
+paragraph.textContent = 'Paragraph content'
+dogDetails.append(paragraph);
 
-dogDetails.append(description)
+//H3 Feeding Times
 
-//put DogDetails in content
+let ulElement = document.createElement('ul')
+let liOne = document.createElement('li')
+liOne.textContent = '9:00 AM'
+ulElement.append(liOne)
+let liTwo = document.createElement('li')
+liTwo.textContent = '12:00 AM'
+ulElement.append(liTwo)
+let liThree = document.createElement('li')
+liThree.textContent = '5:00 PM'
+ulElement.append(liThree)
+
+dogDetails.append(ulElement)
+
+//appending
+dogContent.append(dogImage)
 content.append(dogDetails)
-
-//Put DogContent into content
 content.append(dogContent)
 
 
