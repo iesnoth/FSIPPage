@@ -1,5 +1,9 @@
+
+
 let content = document.querySelector('.js-generated.content')
+
 //Creates Rizzo header, make dog-name class, and append to content div
+
 let header = document.createElement('h1')
 
 header.textContent = 'Rizzo'
